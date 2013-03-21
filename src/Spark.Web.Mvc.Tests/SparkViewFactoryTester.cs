@@ -620,20 +620,6 @@ namespace Spark.Web.Mvc.Tests
             Assert.AreEqual("<p>default view admin area</p>", output.ToString().Trim());
         }
 
-        [Test, Ignore("Pending task #28")]
-        public void FuturesRenderActionCanRunThroughItsProcess()
-        {
-            ControllerBuilder.Current.SetControllerFactory(new RenderActionControllerFactory());
-
-            //System.Reflection.Assembly.Load("Microsoft.Web.Mvc");
-            var result = factory.FindPartialView(controllerContext, "FuturesRenderActionCanRunThroughItsProcess");
-            var viewContext = new ViewContext(controllerContext, result.View, new ViewDataDictionary(), new TempDataDictionary(), output);
-            viewContext.View.Render(viewContext, output);
-
-            Assert.That(output.ToString().Replace("\r\n", ""),
-                        Is.EqualTo("<p>alpha</p><p>gamma</p><p>beta</p>"));
-        }
-
         public class RenderActionControllerFactory : IControllerFactory
         {
             public IController CreateController(RequestContext requestContext, string controllerName)
