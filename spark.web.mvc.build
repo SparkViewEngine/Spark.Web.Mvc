@@ -8,7 +8,7 @@
   <property name="company.name" value="Louis DeJardin &amp; Robert Greyling"/>
   <property name="bin.dir" value="bin" />
   <property name="build.base" value="build"/>
-  <property name="msbuild.dir" value="C:\Windows\Microsoft.NET\Framework\v4.0.30319" />
+  <property name="msbuild.dir" value="C:\Windows\Microsoft.NET\Framework\v3.5" />
   <property name="results.dir" value="${build.base}\results" />
   <property name="version.major" value="1"/>
   <property name="version.minor" value="7"/>
@@ -16,7 +16,7 @@
   <property name="version.revision" value="1"/>
   <property name="project.version" value="${version.major}.${version.minor}" dynamic="true" />
   <property name="project.fullversion" value="${version.major}.${version.minor}.${version.build}.${version.revision}" dynamic="true" />
-  <property name="nant.settings.currentframework" value="net-4.0" />
+  <property name="nant.settings.currentframework" value="net-3.5" />
   <property name="ncover.path" value="${bin.dir}\ncover" />
 
   <property name="project.copyright" value="Copyright (c) ${company.name} 2008-${datetime::get-year(datetime::now())}"/>
